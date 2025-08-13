@@ -13,7 +13,7 @@ describe('Funcionalidade: Finalizar compra', () => {
         sobrenome = faker.person.lastName()
         email = faker.internet.email(nome)
 
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
+        cy.visit('minha-conta')
     });
 
 
@@ -31,14 +31,14 @@ describe('Funcionalidade: Finalizar compra', () => {
 
 
     it('Deve selecionar um produto', () => {
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
+        cy.visit('produtos')
         cy.get('.products > .row')
         .contains('Atlas Fitness Tank')
         .click()
     });
 
     it('Deve adicionar o produto ao carrinho e finalizar compra', () => {
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/atlas-fitness-tank/')
+        cy.visit('produtos/atlas-fitness-tank')
         cy.get('.button-variable-item-M').click()
         cy.get(':nth-child(2) > .value > .variable-items-wrapper > .variable-item').click()
         cy.get('.single_add_to_cart_button').click()
