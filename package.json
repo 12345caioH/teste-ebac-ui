@@ -175,7 +175,9 @@
   },
   "scripts": {
     "test": "npx cypress run --browser chrome",
-    "cy:dash" : "npx cypress run --record --key c007bcca-6c2d-40ed-87c2-20cf01340311"
+    "cy:dash" : "npx cypress run --record --key c007bcca-6c2d-40ed-87c2-20cf01340311",
+    "start": "npx serverest",
+    "cy:run": "npx cypress run"
   },
   "repository": {
     "type": "git",
