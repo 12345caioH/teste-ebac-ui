@@ -1,5 +1,4 @@
 ///<reference types="cypress" /> 
-import { log } from 'async';
 import produtosPage from '../../support/page-objects/produtos.page';
 
 
